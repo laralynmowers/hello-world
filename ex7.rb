@@ -1,29 +1,26 @@
-# I'm going to create a variable called "L" to replace part of a text string, and then use that variable to shorten
-# a line of code.
-L = "little lamb"
+# Here we've set a "format string" where we can interchange the value of each variable by calling it by its name later.
+# The wildcard (%) allows us to "format" variable sets.
+# We can treat these variables like placeholders, and pass different values in.
+formatter = "%{first} %{second} %{third} %{fourth}"
+experiment = "%{one} %{two} %{three}"
+placeholder = "%{l} %{a} %{r}"
+format = "%{a1} %{a2}"
 
-puts "Mary had a #{L}, #{L}, #{L}."
-puts "Mary had a #{L}."
-puts "Its fleece was white as #{'snow'}."
-puts "And everywhere that Mary went."
-puts "." * 10 #what did that do?
-puts "That lamb was sure to go."
-puts "Mary had a #{L * 3}."
+puts formatter % {first: 1, second: 2, third: 3, fourth: 4}
+puts formatter % {first: "first", second: "second", third: "three", fourth: "four"}
+puts formatter % {first: true, second: false, third: true, fourth: false}
+puts formatter % {first: formatter, second: formatter, third: formatter, fourth: formatter}
 
-end1 = "C"
-end2 = "h"
-end3 = "e"
-end4 = "e"
-end5 = "s"
-end6 = "e"
-end7 = "B"
-end8 = "u"
-end9 = "r"
-end10 = "g"
-end11 = "e"
-end12 = "r"
+puts formatter % {
+         first: "I had this thing.",
+         second: "That you could type up right.",
+         third: "But it couldn't sing.",
+         fourth: "So I said goodnight."
+     }
 
-print end1 + end2 + end3 + end4 + end5 + end6
-puts end7 + end8 + end9 + end10 + end11 + end12
+puts experiment % {one: "just", two: "like", three: "this"}
+puts placeholder % {l: "Ice Cream", a: 100, r: true}
+
+puts format % {a1: "first place", a2: "second place"}
 
 
