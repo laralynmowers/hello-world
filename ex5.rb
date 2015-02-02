@@ -17,4 +17,6 @@ puts "Her teeth are usually #{teeth}——depending on how much coffee she's had
 puts "If I add #{age}, #{height}, and #{weight} I get #{age + height + weight}."
 puts "This year, #{name} be #{age + 1}."
 puts "If she got more winter riding in, she'd probs weigh #{weight + 10}, and the difference would be muscle."
+puts "#{name} def could use some sun this winter."
+
 
