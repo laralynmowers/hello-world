@@ -1,4 +1,4 @@
-# This is a change I'm testing to see if sticks.
+# This is an unwanted, but committed, change.
 # Default is "World"
 name = ARGV.first || "World"
 
