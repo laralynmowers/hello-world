@@ -1,25 +1,45 @@
+# Here we will make a variable that contains all of the [abbreviated] days of the week to use in a string below.
 days = "Mon Tue Wed Thu Fri Sat Sun"
 
-# \n indicates new line.
-months = "\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nDec"
-
 puts "The days of the week are: #{days}"
-puts "The months are: #{months}"
 
-# You can make block quotes by beginning and ending with three quotes. Indention in a line will be printed too.
+# Here we will make a variable that contains a list of months on separate lines. "\n" denotes a hard return.
+q1months = "\nJan\nFeb\nMar"
+
+puts "The first quarter months are: #{q1months}"
+
+# By beginning and ending with three quotes, the contained text will be printed exactly.
 puts """
-  There's something going on here.
+       There's something going on here.
   With the three double quotes.
-  I can type as much as I like.
-  On and on, 4 lines if I want.
-  Or even 5 or 6.
+     I can type as much as I like.
+        ... I might even
+Start typing
+    all over
+ the
+      place
+               just
+          because
+                  I can.
 
 """
+# To create a new line, use the \n hard return escape sequence.
+persian_cat = "\nI am persian cat\nI take up as much space as\nI want."
 
-study = "\n\t* Monday\n\t* Tuesday\n\t* Wednesday"
-work = "\n\t* Thursday\n\t* Friday\n\t* Saturday"
-free = "Sun"
+# To indent text, use the \t escape sequence.
+tabby_cat = "\tI'm a tabby cat, and \tsuper\ttabbed\tin."
 
-puts "Laralyn stays up late to study on #{study}"
-puts "And works late on #{work}"
-puts "The only free night for chillen is #{free}"
+# To insert a single backslash, use the \\ escape sequence.
+backslash_cat = "I'm \\ a \\ backslash \\ cat."
+
+fat_cat = """
+I'm a fat cat, and like making lists of things to eat:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass
+"""
+
+puts persian_cat
+puts tabby_cat
+puts backslash_cat
+puts fat_cat
